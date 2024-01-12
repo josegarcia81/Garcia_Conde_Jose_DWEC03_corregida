@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="utf-8">
+        <!------------- TITULO DE LA PAGINA ---------------------->
+        <title>Tarea Evaluativa DWEC03</title>
+        <link rel="stylesheet" href="../styles/estilos.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Quicksand&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-------------LAMADA SCRIPTS y CARGA JQUERY ---------------------->
+        <script type="text/javascript" src="../control/js/jquery_3_7_2.js"></script>
+        <script type="text/javascript" src="../control/js/scriptjuego2.js"></script>
+    </head>
+
+    <body>
+        <!---------------EJERCICIO 2 - TRES EN RAYA --------->
+        <h1>Tres en raya</h1>
+        <p>Selecciona color:</p>
+        <nav>
+            <button id="butrojo" class="butrojo">ROJO</button>
+            <button id="butazul" class="butazul">AZUL</button>    
+        </nav>
+        <!-- TABLERO DE JUEGO -->
+        <section id="tablero" class="tablero">
+            <!-- 
+            <div id="1" class=""></div>
+            <div id="2" class=""></div>
+            <div id="3" class=""></div>
+            <div id="4" class=""></div>
+            <div id="5" class=""></div>
+            <div id="6" class=""></div>
+            <div id="7" class=""></div>
+            <div id="8" class=""></div>
+            <div id="9" class=""></div> 
+            -->
+        </section>
+        <!-- TEXTO QUE ESTA HIDEN Y SALE CUANDO UN JUGADOR GANA -->
+        <h3 id="gana" class="esconder"></h3>
+        <!-- <h3 id="ganaazul" class="esconder">HA GANADO AZUL</h3> -->
+        <!--<h3 class = "esconderazul">gana azul</h3>-->
+        <!-- Resetear tablero -->
+        <button id="resetpartida" class="botonreset">EMPEZAR DE NUEVO</button>
+        
+    </body>
+
+
+</html>
