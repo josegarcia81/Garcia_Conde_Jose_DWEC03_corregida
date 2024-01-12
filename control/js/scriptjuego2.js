@@ -63,26 +63,18 @@ $(document).ready(function(){
             alert("casilla marcada por jugador: " + jugador2)
         
         }else{
-            //pintar(nombreId,color)
+            
             $("#"+nombreId).removeClass().addClass(jugador1)
             arrayJugadas[nombreId-1] = jugador1
-            //arrayJugadas.push(rojo)
+            
 
             comprobarGanador(jugador1)
         }
 
     })
     // COMPROBAR CON IF ELSE SI HAY GANADOR //
-    // si se le llama desde las funciones despues de poner color //
+    // se le llama desde las funciones despues de poner color //
     function comprobarGanador(color){
-
-        // if(color == rojo){
-        //     contadorrojo++
-        //     console.log(contadorrojo)
-        // } else{
-        //     contadorazul++
-        //     console.log(contadorazul)
-        // }
 
         if(arrayJugadas[0] === color && arrayJugadas[1] === color && arrayJugadas[2] === color){
             alert("Has ganado la partida: Jugador " + color)
@@ -93,49 +85,49 @@ $(document).ready(function(){
 
         }else if(arrayJugadas[3] === color && arrayJugadas[4] === color && arrayJugadas[5] === color){
             alert("Has ganado la partida: Jugador " + color)
-            $("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
+            //$("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
             arrayJugadas = [];
             $("div").removeClass()
             contadorPartidas(color)
 
         }else if(arrayJugadas[6] === color && arrayJugadas[7] === color && arrayJugadas[8] === color){
             alert("Has ganado la partida: Jugador " + color)
-            $("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
+            //$("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
             arrayJugadas = [];
             $("div").removeClass()
             contadorPartidas(color)
 
         }else if(arrayJugadas[0] === color && arrayJugadas[3] === color && arrayJugadas[6] === color){
             alert("Has ganado la partida: Jugador " + color)
-            $("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
+            //$("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
             arrayJugadas = [];
             $("div").removeClass()
             contadorPartidas(color)
 
         }else if(arrayJugadas[1] === color && arrayJugadas[4] === color && arrayJugadas[7] === color){
             alert("Has ganado la partida: Jugador " + color)
-            $("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
+            //$("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
             arrayJugadas = [];
             $("div").removeClass()
             contadorPartidas(color)
 
         }else if(arrayJugadas[2] === color && arrayJugadas[5] === color && arrayJugadas[8] === color){
             alert("Has ganado la partida: Jugador " + color)
-            $("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
+            //$("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
             arrayJugadas = [];
             $("div").removeClass()
             contadorPartidas(color)
 
         }else if(arrayJugadas[0] === color && arrayJugadas[4] === color && arrayJugadas[8] === color){
             alert("Has ganado la partida: Jugador " + color)
-            $("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
+            //$("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
             arrayJugadas = [];
             $("div").removeClass()
             contadorPartidas(color)
 
         }else if(arrayJugadas[2] === color && arrayJugadas[4] === color && arrayJugadas[6] === color){
             alert("Has ganado la partida: Jugador " + color)
-            $("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
+            //$("#esconder").html("<p>gana " + color + "</p>").attr("visibility","visible")
             arrayJugadas = [];
             $("div").removeClass()
             contadorPartidas(color)
@@ -143,7 +135,7 @@ $(document).ready(function(){
         }
         console.log(arrayJugadas)
     }
-
+    // PARA CONTAR EL NUMERO DE PARTIDAS Y CONTROLAR SI HAY GANADOR //
     function contadorPartidas(color){
             
         if(color == rojo){
@@ -156,64 +148,25 @@ $(document).ready(function(){
 
         if(contadorrojo == 3){
             alert("GANADOR ABSOLUTO COLOR: "+color)
-            //toUpperCase(color)
             $("#gana").removeClass().addClass("ver").append("HA GANADO EL: " + color)
             //$("#ganador").append("GANADOR JUGADOR ROJO").attr("visibility","visible")
             contadorrojo = 0;
+            contadorazul = 0;
         } else if(contadorazul == 3){
             alert("GANADOR ABSOLUTO COLOR: "+color)
             $("#gana").removeClass().addClass("ver").append("HA GANADO EL: " + color)
             contadorazul = 0;
+            contadorrojo = 0;
         }
     }
-    // FUNCION COMUN DONDE LE PASABA LA ID DEL DIV Y EL COLOR FUNCIONA PERO GENERA EL MISMO ERROR //
-    //  function pintar(nombreId,color){
-    //      $("#"+nombreId).removeClass().addClass(color)
-    //      //$("#"+nombreId).attr("class",color)
-    //      // aniadir color al array para comparar ganador
-    //      arrayJugadas.push(color)
-    //  } 
-
-    // FUNCION COMUN PARA HACER SOLO UNA LLAMADA AL CLICK CON UNA VARIABLE COLOR //
-    // function pintar(color){
-    //     console.log("boton " +color+ " activado")
-    //     var contrario = azul
-
-    //     // controlar el color para definir el contrario //
-    //     if(color != rojo){
-    //         contrario = rojo;
-    //     } else {
-    //      contrario = azul
-    //     }
-
-        //  PARA CONTROLAR QUE LA CASILLA NO SE PINTE UN COLOR ENCIMA DE OTRO //
-    //     $("div").click(function(){
-    //     var nombreClase1 = $(this).attr("class");
-    //     console.log(nombreClase1);
-
-    //     var nombreId = $(this).attr("id");
-    //     console.log(nombreId);
-        
-    //     $("#"+nombreId).removeClass().addClass(color)
-    //     //$("#"+nombreId).attr("class","rojo")
-        
-    //     if($(this).hasClass(contrario)){
-            
-    //         alert("casilla marcada por el azul")
-        
-    //     }else{
-    //         //pintar(nombreId,color)
-    //         $("#"+nombreId).removeClass().addClass(color)
-    //     }
-    // })
-    // }
+    
     // FUNCION DE RESET DEL TABLERO //
     var botonReset = $("#resetpartida");
     botonReset.click(function(){
         $("div").removeClass()
         arrayJugadas = [];
         console.log(arrayJugadas)
-        //window.location.reload()// AÑADIDO PARA RESETEAR COMPLETO PORQUE ME REPITE CLICK-S
+        window.location.reload()// AÑADIDO PARA RESETEAR COMPLETO
     })
 
 });
